@@ -6,7 +6,7 @@ build:
 	@go build -o build/solver cmd/main.go
 
 clean:
-	rm -r build
+	if [ -d "build" ]; then rm -r build; fi
 
 test:
 	@go test ./pkg/vigenere
